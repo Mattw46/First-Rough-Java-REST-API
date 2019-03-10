@@ -1,23 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Personal Proof of Concept:
+ * building basic REST API using Servlet and JSON Simple
  */
 package com.mattwdev;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StringWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.simple.*;
 
-/**
- *
- * @author neo
- */
+
 public class RoughRESTAPI extends HttpServlet {
 
     
@@ -42,7 +37,6 @@ public class RoughRESTAPI extends HttpServlet {
         obj.put("balance",new Double(1000.21));
         obj.put("is_vip",new Boolean(true));
 
-        //StringWriter out = new StringWriter();
         try {
           obj.writeJSONString(out);
         } catch (Exception e) {
